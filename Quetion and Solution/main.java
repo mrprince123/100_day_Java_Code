@@ -1,27 +1,18 @@
-import java.util.Arrays;
-import java.util.Scanner;
-
 public class main {
 
     public static void main(String[] args) {
-
-        // Code Lickage.
-
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number : ");
-        int num = sc.nextInt();
-
-        for(int i  = 1; i<=num; i++){
-            for(int j = 1; i<=num-i; j++){
-                System.out.print(" ");
+        
+        int num = 232324;
+        int n = 2;
+        int count = 0; 
+        while (num > 0){
+            int rem = num% 10;
+            if(rem == n){
+                count++;
             }
-            for(int j=i; j>=1; j--){
-                System.out.print(j);
-            }
-            for(int j = 2; j<=i; j++){
-                System.out.print(j);
-            }
-            System.out.println();
+            num = num/10;
         }
+        System.out.println(count);
     }
 }
+

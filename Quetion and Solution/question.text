@@ -483,4 +483,124 @@ public class main {
     }
 }
 
-Quesiton 23 : 
+Quesiton 23 : Palindrom pattern using java.
+Solution - Not Exact
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        int n = 5;
+        for(int i =1; i<=n; i++){
+            for(int j=1; i<=n-1; j++){
+                System.out.print(" ");
+            }
+            for(int j = i; j>=1; j--){
+                System.out.print(j);
+            }
+            for(int j = 2; j<=i; j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+Question 24 : Print Diamond pattern using java.
+Solution
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        int n = 4;
+        for(int i = 1; i<=n; i++){
+            for(int j=1; j<=n-i; j++){
+                System.out.print( " ");
+            }
+            for(int j=1; j<=2*i-1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i = n; i>=1; i--){
+            for(int j = 1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            for(int j=1; j<=2*i-1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+Question 25 : Shuffle the array using java. 
+Solution
+public class main {
+
+    public static void main(String[] args) {
+        String s = "abcdef";
+        char[] chars = s.toCharArray();
+        for(int i = 1; i<=chars.length; i=i+2){
+            char temp = chars[i-1];
+            chars[i-1] = chars[i];
+            chars[i] = temp;
+        }
+        for(int i = 0; i<chars.length; i++){
+            System.out.print(chars[i] + " ");
+        }
+    }
+}
+
+Question 26 : Remove the white spaces in a sentence using java
+Solution
+public class main {
+
+    public static void main(String[] args) {
+        
+        String texting = "this is a white space";
+        String remove = texting.replace(" ", "");
+        System.out.println(remove);
+    }
+}
+
+Question 27 : Remove all special character from string
+Solution 
+public class main {
+
+    public static void main(String[] args) {
+        
+        String texting = "@#$@3u3";
+        String remove = texting.replaceAll("[^a-zA-Z0-9]", "");
+        System.out.println(remove);
+    }
+}
+
+Question : 28 : Count Digit Frequency 
+Solution 
+public class main {
+
+    public static void main(String[] args) {
+        
+        int num = 232324;
+        int n = 2;
+        int count = 0; 
+        while (num > 0){
+            int rem = num% 10;
+            if(rem == n){
+                count++;
+            }
+            num = num/10;
+        }
+        System.out.println(count);
+    }
+}
+
+0 1 2 3 4 5 6 7 8 9
